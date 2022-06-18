@@ -1,0 +1,128 @@
+html{
+    font-family:comic sans MS;
+}
+body{
+    background-color: rgb(206, 236, 248);
+    align-items: center;
+    text-align: center;
+    word-wrap: normal;
+}
+h1{
+    top: 1em;
+    left: 40%;
+    color: crimson;
+    letter-spacing: 0.1em;
+    font-size:3em;
+    text-decoration: solid;
+    text-shadow: 0 0 3px gold;
+    overflow-wrap: normal;
+}
+h2{
+    color:crimson;
+    text-shadow: 0 0 2px gold;
+    overflow-wrap: normal;
+}
+h3{
+    font-size: large;
+    text-decoration: underline;
+}
+.tabhead{
+    text-decoration: underline;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0px 0px 1px tomato;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(182, 0, 0);
+    border-radius: 12px;
+}
+@media only screen and (min-width:1000px) {
+    ul{
+        flex-direction: row;
+    }
+    .tablescroll{
+        height: 350px;
+        overflow: auto;
+    }
+    #checkout{
+        position: absolute;
+    }
+}
+@media only screen and (max-width:999px){
+    ul{
+        flex-direction:column;
+        scrollbar-width: 5px;
+    }
+    #checkout{
+        position: fixed;
+    }
+    table, th, tr{
+        width: 350px;
+    }
+    select{
+        width: 340px;
+    }
+}
+ul{
+    display: inline-flex;
+    list-style-type: none;
+    min-width: fit-content;
+}
+
+button{
+    display: flexbox;
+    align-self:flex-end;
+}
+#checkout{
+    right:5%
+}
+table{
+    display:block;
+    text-align: center;
+    scroll-padding:initial;
+}
+.tabchoice{
+    border-top: 3px solid yellow;
+    margin: 5px;
+    background-color:gold;
+    color: tomato;
+}
+.second{
+    visibility: hidden;
+}
+img{
+    width: 80px;
+    height: 80px;
+}
+#shopcart{
+    background-color: aliceblue;
+    display: none;
+}
+th{
+    background-color: sienna;
+    color: gold;
+    align-self: center;
+}
+.topcolor{
+    background-color: sienna;
+}
+td{
+    align-items: center;
+}
+.header{
+    display:inline-block;
+}
+#fifty{
+    display:inline-block;
+    align-self: center;
+}
+select{
+    background-color: gold;
+    color:tomato;
+    outline: none;
+    border: none;
+    font-size: medium;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<title>The Stuffed Crust | Order</title>
+<div id="checkout">
+    <button class="checkout" id="checkout" onclick="Showcart(this)">Check<br>cart</button>
+    <div id="shopcart">
+        <button onclick="Checkout()" id="buy"> Checkout</button>
+    </div>
+</div>
+<head>
+    <link rel="stylesheet" href="TheStuffedCrust.css">
+    <script src="TheStuffedCrust.js"></script>
+    <div>
+        <h1>The Stuffed Crust</h1>
+    </div>
+    <h2>Order your Stuffed Crust Pizza for as low as £7.99</h2>
+    <h3>Create your pizza meal in just 5 easy steps</h3>
+</head>
+<ul name="PizzaCreator"id=newPizza>
+    <li class="tabchoice">
+        <table class="addbase">
+            <tr>
+                <th class="addbase">Add a base</th>
+            </tr>
+            <tr>
+                <td>
+                    <select class="addbase" id="Base" onchange="Enable()">
+                        <option value="">Choose a Base</option>
+                        <option value="Thin Italian Crust">
+                            Thin Italian Crust
+                        </option>
+                        <option value="Stone Crust">
+                            Stone Crust Base
+                        </option>
+                        <option value="Cheese Stuffed Crust">
+                    Cheese Stuffed Crust Base
+                        </option>
+                        <option value="Vegan">
+                            Vegan Base
+                        </option>
+                        <option value="Gluten Free">
+                            Gluten Free Base
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li class="tabchoice">
+        <table class="addsize">
+            <tr>
+                <th>Choose a size</th>
+            </tr>
+            <tr>
+                <td>
+                    <select class="addsize" id="Size" onchange="Enable()">
+                        <option value="">Choose a size</option>
+                        <option value="8''">Small (8")</option>
+                        <option value="12''">Medium (12")</option>
+                        <option value="16''">Large (16")</option>
+                        <option value="20''">Pizzanormous (20")</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li class="tabchoice">
+        <div class="topcolor">
+            <table class="addtop header">
+                <tr>
+                    <th>Choose your toppings</th>
+                </tr>
+            </table>
+        </div>
+        <table class="addtop" id="fifty">
+            <tr>
+                <td>1 pizza, 2 sets of toppings <input type="checkbox" id="50/50" onchange="Fiftyfifty()"></td>
+            </tr>
+        </table>
+        <div class="tablescroll">
+            <table class="addtop" id="Toppings">
+                <tr  class="second">
+                    <td></td>
+                    <td></td>
+                    <td>1st Half</td>
+                    <td>2nd Half</td>
+                </tr>
+                <tr name="Pepperoni">
+                    <td>Pepperoni</td>
+                    <td><img src="images/pepperoni.jpg"></td>
+                    <td><input type="checkbox" name="Pepperoni" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Pepperoni" class="toppings"></td>
+                </tr>
+                <tr name="Sausage">
+                    <td>Sausage</td>
+                    <td><img src="images/sausage.jpg"></td>
+                    <td><input type="checkbox" name="Sausage"  class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Sausage"></td>
+                </tr>
+                <tr name="Chicken">
+                    <td>Chicken</td>
+                    <td><img src="images/chicken.jpg"></td>
+                    <td><input type="checkbox" name="Chicken" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Chicken"></td>
+                </tr>
+                <tr name="Ham">
+                    <td>Ham</td>
+                    <td><img src="images/ham.jpg"></td>
+                    <td><input type="checkbox" name="Ham" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Ham"></td>
+                </tr>
+                <tr name="Pepper">
+                    <td>Pepper</td>
+                    <td><img src="images/pepper.jpg"></td>
+                    <td><input type="checkbox" name="Pepper" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Pepper" ></td>
+                </tr>
+                <tr name="Sweetcorn">
+                    <td>Sweetcorn</td>
+                    <td><img src="images/sweetcorn.jpg"></td>
+                    <td><input type="checkbox" name="sweetcorn" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="sweetcorn"></td>
+                </tr>
+                <tr name="Mushroom">
+                    <td>Mushroom</td>
+                    <td><img src="images/mushroom.jpg"></td>
+                    <td><input type="checkbox" name="Mushroom" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Mushroom"></td>
+                </tr>
+                <tr name="Onion">
+                    <td>Onion</td>
+                    <td><img src="images/onion.jpg"></td>
+                    <td><input type="checkbox" name="Onion" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Onion"></td>
+                </tr>
+                <!--Do not order a Pineapple topped pizza.
+                    The fewer that exist, the better-->
+                <tr name="Pineapple">
+                    <td>Pineapple</td>
+                    <td><img src="images/pineapple.jpg"></td>
+                    <td><input type="checkbox" name="Pineapple" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Pineapple"></td>
+                </tr>
+                <tr name="Olive">
+                    <td>Olive</td>
+                    <td><img src="images/olive.jpg"></td>
+                    <td><input type="checkbox" name="Olive" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Olive"></td>
+                </tr>
+                <tr name="Bacon">
+                    <td>Bacon</td>
+                    <td><img src="images/bacon.jpg"></td>
+                    <td><input type="checkbox" name="Bacon" class="toppings"></td>
+                    <td><input type="checkbox" class="second" name="Bacon"></td>
+                </tr>
+
+            </table>
+        </div>
+    </li>
+    <li class="tabchoice">
+        <div class="topcolor">
+        <table class="addside header">
+            <tr>
+                <th>Choose your sides</th>
+            </tr>
+        </table>
+    </div>
+        <table class="addside">
+            <tr>
+                <td>
+                    <div class="tablescroll">
+                    <table class="addside" id="sides">
+                        <tr></tr>
+                        <tr name="salad">
+                            <td>Salad (99p)</td>
+                            <td><img src="images/salad.jpg"></td>
+                            <td><input type="checkbox" name="Salad" class="sides"></td>
+                        </tr>
+                        <tr name="garlicbread">
+                            <td>Garlic Bread (£2.99)</td>
+                            <td><img src="images/garlicbread.jpg"></td>
+                            <td><input type="checkbox" name="Garlic Bread" class="sides"></td>
+                        </tr>
+                        <tr name="cheesegbread">
+                            <td>Cheesy<br>Garlic Bread (£3.99)</td>
+                            <td><img src="images/cheesegbread.jpg"></td>
+                            <td><input type="checkbox" name="Cheesy Garlic Bread" class="sides"></td>
+                        </tr>
+                        <tr name="coleslaw">
+                            <td>Coleslaw (99p)</td>
+                            <td><img src="images/coleslaw.jpg"></td>
+                            <td><input type="checkbox" name="Coleslaw" class="sides"></td>
+                        </tr>
+                        <tr name="wings">
+                            <td>Chicken Wings (£3.99)</td>
+                            <td><img src="images/wings.jpg"></td>
+                            <td><input type="checkbox" name="Chicken Wings" class="sides"></td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li class="tabchoice">
+        <div class="topcolor">
+        <table class="adddrink header">
+            <tr>
+                <th>Choose your drinks</th>
+            </tr>
+        </table>
+    </div>
+        <table class="adddrink">
+            <tr>
+                <td>
+                    <div class="tablescroll">
+                    <table class="adddrink" id="drinks">
+                        <tr></tr>
+                        <tr name="pepsi">
+                            <td>Pepsi (50p)</td>
+                            <td><img src="images/pepsi.jpg"></td>
+                            <td><input type="checkbox" name="Pepsi" class="drinks"></td>
+                        </tr>
+                        <tr name="max">
+                            <td>Pepsi Max (50p)</td>
+                            <td><img src="images/max.jpg"></td>
+                            <td><input type="checkbox" name="Pepsi Max" class="drinks"></td>
+                        </tr>
+                        <tr name="drpepper">
+                            <td>Dr Pepper (50p)</td>
+                            <td><img src="images/drpepper.jpg"></td>
+                            <td><input type="checkbox" name="Dr Pepper" class="drinks"></td>
+                        </tr>
+                        <tr name="7up">
+                            <td>7-up (50p)</td>
+                            <td><img src="images/7up.jpg"></td>
+                            <td><input type="checkbox" name="7-up" class="drinks"></td>
+                        </tr>
+                        <tr name="tango">
+                            <td>Tango (50p)</td>
+                            <td><img src="images/tango.jpg"></td>
+                            <td><input type="checkbox" name="Tango" class="drinks"></td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </li>
+</ul>
+<div>
+    <button disabled id="Order" onclick="Order()">Add to order</button>
+</div>
